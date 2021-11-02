@@ -1,0 +1,18 @@
+# ========+======== #
+#     TeamChat      #
+# ========+======== #
+
+message:
+  sent: "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%"
+  received: "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%"
+
+#    main    ;   tc.main  ;   #tc    ;  §b§lTC
+# Chat Name    permission   command    Chat Prefix
+# -> Permission: ;?; without ; = no permission
+chatTypes:
+  - 'main;tc.main;#tc;§b§lTC'
+  - 'leader;tc.lead;#sr;§4§lSR'
+  - 'supporter;tc.sup;#sup;§2§lSC'
+  - 'moderator;tc.mod;#mc;§5§lMC'
+  - 'developer;tc.dev;#dc;§0§lDC'
+  - 'builder;tc.builder;#bc;§a§lBC'
