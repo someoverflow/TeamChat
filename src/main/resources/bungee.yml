@@ -2,4 +2,4 @@ name: TeamChat
 version: '${version}'
 main: me.someoverflow.teamchat.TeamChat
 author: SomeOverflow
-description: Easy TeamChat plugin for Waterfall
+description: TeamChat plugin for Waterfall
