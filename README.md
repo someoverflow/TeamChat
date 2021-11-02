@@ -1,6 +1,8 @@
 <h1 align="center">Welcome to TeamChat 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://repo.someworkflow.de/#/releases/me/someoverflow/teamchat">
+    <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  </a>
   <a href="https://github.com/SomeOverflow/TeamChat/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT License" src="https://img.shields.io/badge/License-MIT License-yellow.svg" />
   </a>
@@ -8,24 +10,14 @@
 
 > Simple & Customizable Team Chat plugin
 
-### 🏠 [Homepage](https://someworkflow.de)
+### 🏠 [Homepage](https://someworkflow.de) (In work)
 
 ## Usage
 
 ```sh
 '#reloadtc' to reload config
+You can edit the rest in the config
 ```
-
-## Author
-
-👤 **SomeOverflow**
-
-* Website: https://someworkflow.de
-* Github: [@SomeOverflow](https://github.com/SomeOverflow)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/SomeOverflow/TeamChat/issues). 
 
 ## Show your support
 
@@ -37,4 +29,4 @@ Copyright © 2021 [SomeOverflow](https://github.com/SomeOverflow).<br />
 This project is [MIT License](https://github.com/SomeOverflow/TeamChat/blob/master/LICENSE) licensed.
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_ because i am tooo lazy!
