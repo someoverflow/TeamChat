@@ -16,3 +16,4 @@ chatTypes:
   - 'moderator;tc.mod;#mc;§5§lMC'
   - 'developer;tc.dev;#dc;§0§lDC'
   - 'builder;tc.builder;#bc;§a§lBC'
+  - 'public;?;#pc;§f§lPC'
