@@ -55,6 +55,8 @@ public final class TeamChat extends Plugin {
 
     public void reloadConfig() {
         configAccessor.reloadConfig();
+        messageSent = configAccessor.getConfig().getString("message.sent", "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%");
+        messageReceived = configAccessor.getConfig().getString("message.received", "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%");
         chatTypes = configAccessor.getConfig().getStringList("chatTypes");
         if (chatTypes.isEmpty()) {
             instance.getLogger().log(Level.INFO, "There are no chat types in the config...");

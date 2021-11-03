@@ -42,9 +42,15 @@ public class Listener implements net.md_5.bungee.api.plugin.Listener {
    for (ProxiedPlayer players : TeamChat.getInstance().getProxy().getPlayers()) {
     if (players.equals(player)) {
      player.sendMessage(new TextComponent(TeamChat.getInstance().getMessageSent()
-             .replaceAll("%prefix%", prefix).replaceAll("%message%", message)));
+             .replaceAll("%prefix%", prefix)
+             .replaceAll("%sender%", player.getDisplayName())
+             .replaceAll("%message%", message)
+             .replaceAll("%server%", player.getServer().getInfo().getName())));
     } else players.sendMessage(new TextComponent(TeamChat.getInstance().getMessageReceived()
-            .replaceAll("%prefix%", prefix).replaceAll("%sender%", player.getDisplayName()).replaceAll("%message%", message)));
+            .replaceAll("%prefix%", prefix)
+            .replaceAll("%sender%", player.getDisplayName())
+            .replaceAll("%message%", message)
+            .replaceAll("%server%", player.getServer().getInfo().getName())));
    }
   } else {
    for (ProxiedPlayer players :
@@ -52,10 +58,15 @@ public class Listener implements net.md_5.bungee.api.plugin.Listener {
     if (players.hasPermission(permission)) {
      if (players.equals(player)) {
       player.sendMessage(new TextComponent(TeamChat.getInstance().getMessageSent()
-              .replaceAll("%prefix%", prefix).replaceAll("%message%", message)));
+              .replaceAll("%prefix%", prefix)
+              .replaceAll("%sender%", player.getDisplayName())
+              .replaceAll("%message%", message)
+              .replaceAll("%server%", player.getServer().getInfo().getName())));
      } else players.sendMessage(new TextComponent(TeamChat.getInstance().getMessageReceived()
-             .replaceAll("%prefix%", prefix).replaceAll("%sender%", player.getDisplayName()).replaceAll("%message%", message)
-     ));
+             .replaceAll("%prefix%", prefix)
+             .replaceAll("%sender%", player.getDisplayName())
+             .replaceAll("%message%", message)
+             .replaceAll("%server%", player.getServer().getInfo().getName())));
     }
    }
   }
