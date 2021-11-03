@@ -1,5 +1,5 @@
 name: TeamChat
 version: '${version}'
-main: me.someoverflow.teamchat.TeamChat
+main: me.someoverflow.teamchat.bungee.BTeamChat
 author: SomeOverflow
 description: TeamChat plugin for Waterfall

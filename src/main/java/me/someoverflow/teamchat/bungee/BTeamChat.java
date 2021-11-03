@@ -1,15 +1,16 @@
-package me.someoverflow.teamchat;
+package me.someoverflow.teamchat.bungee;
 
 import net.md_5.bungee.api.plugin.Plugin;
 
 import java.util.List;
 import java.util.logging.Level;
 
-public final class TeamChat extends Plugin {
+public final class BTeamChat extends Plugin {
 
-    private static TeamChat instance;
-    private ConfigAccessor configAccessor;
+    private static BTeamChat instance;
+    private ConfigAccessorBungee configAccessor;
 
+    private String reloadPermission;
     private String messageSent;
     private String messageReceived;
     private List<String> chatTypes;
@@ -18,7 +19,7 @@ public final class TeamChat extends Plugin {
     public void onEnable() {
         instance = this;
         instance.getLogger().log(Level.INFO, "Loading Config...");
-        configAccessor = new ConfigAccessor(this, "config.yml");
+        configAccessor = new ConfigAccessorBungee(this, "config.yml");
         configAccessor.saveDefaultConfig();
         configAccessor.saveConfig();
         instance.getLogger().log(Level.INFO, "Config Loaded");
@@ -26,6 +27,7 @@ public final class TeamChat extends Plugin {
         instance.getLogger().log(Level.INFO, "Loading messages from Config...");
         messageSent = configAccessor.getConfig().getString("message.sent", "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%");
         messageReceived = configAccessor.getConfig().getString("message.received", "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%");
+        reloadPermission = configAccessor.getConfig().getString("permission.reload", "tc.reload");
         instance.getLogger().log(Level.INFO, "Messages from Config Loaded");
 
         instance.getLogger().log(Level.INFO, "Chat types from Config...");
@@ -42,7 +44,7 @@ public final class TeamChat extends Plugin {
         instance.getLogger().log(Level.INFO, "Chat types from Config Loaded");
 
         instance.getLogger().log(Level.INFO, "Loading Listener...");
-        this.getProxy().getPluginManager().registerListener(this, new Listener());
+        this.getProxy().getPluginManager().registerListener(this, new BListener());
         instance.getLogger().log(Level.INFO, "Listener Loaded");
         instance.getLogger().log(Level.INFO, "Plugin started");
     }
@@ -57,11 +59,12 @@ public final class TeamChat extends Plugin {
         configAccessor.reloadConfig();
         messageSent = configAccessor.getConfig().getString("message.sent", "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%");
         messageReceived = configAccessor.getConfig().getString("message.received", "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%");
+        reloadPermission = configAccessor.getConfig().getString("permission.reload", "tc.reload");
         chatTypes = configAccessor.getConfig().getStringList("chatTypes");
         if (chatTypes.isEmpty()) {
             instance.getLogger().log(Level.INFO, "There are no chat types in the config...");
         } else {
-            TeamChat.getInstance().getLogger().log(Level.INFO, "Reload config with types:");
+            BTeamChat.getInstance().getLogger().log(Level.INFO, "Reload config with types:");
             for (String s : chatTypes) {
                 String[] strings = s.split(";");
                 instance.getLogger().log(Level.INFO, strings[0] + " | " + strings[1] + " | " + strings[2] + " | " + strings[3]);
@@ -69,23 +72,19 @@ public final class TeamChat extends Plugin {
         }
     }
 
-    public static TeamChat getInstance() {
+    public static BTeamChat getInstance() {
         return instance;
     }
-
     public String getMessageReceived() {
         return messageReceived;
     }
-
     public String getMessageSent() {
         return messageSent;
     }
-
     public List<String> getChatTypes() {
         return chatTypes;
     }
-
-    public ConfigAccessor getConfigAccessor() {
-        return configAccessor;
+    public String getReloadPermission() {
+        return reloadPermission;
     }
 }
