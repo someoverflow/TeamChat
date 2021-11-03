@@ -15,6 +15,7 @@ public final class STeamChat extends JavaPlugin {
     private ConfigAccessorPaper configAccessor;
 
     private String reloadPermission;
+    private String serverName;
     private String messageSent;
     private String messageReceived;
     private List<String> chatTypes;
@@ -25,14 +26,19 @@ public final class STeamChat extends JavaPlugin {
         instance.getLogger().log(Level.INFO, "Loading Config...");
         configAccessor = new ConfigAccessorPaper(this, "config.yml");
         configAccessor.saveDefaultConfig();
-        configAccessor.getConfig().options().copyDefaults(true);
+        /* TODO
+        if (!configAccessor.getConfig().contains("message.server"))
+            configAccessor.getConfig().set("message.server", "!! serverName here !!");
         configAccessor.saveConfig();
+         */
         instance.getLogger().log(Level.INFO, "Config Loaded");
 
         instance.getLogger().log(Level.INFO, "Loading messages from Config...");
         messageSent = configAccessor.getConfig().getString("message.sent", "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%");
         messageReceived = configAccessor.getConfig().getString("message.received", "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%");
+        // serverName = configAccessor.getConfig().getString("message.server", "NoName");
         reloadPermission = configAccessor.getConfig().getString("permission.reload", "tc.reload");
+        reloadPermission = configAccessor.getConfig().getString("message.server", "NoName");
         instance.getLogger().log(Level.INFO, "Messages from Config Loaded");
 
         instance.getLogger().log(Level.INFO, "Chat types from Config...");
@@ -64,6 +70,7 @@ public final class STeamChat extends JavaPlugin {
         configAccessor.reloadConfig();
         messageSent = configAccessor.getConfig().getString("message.sent", "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%");
         messageReceived = configAccessor.getConfig().getString("message.received", "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%");
+        // serverName = configAccessor.getConfig().getString("message.server", "NoName");
         chatTypes = configAccessor.getConfig().getStringList("chatTypes");
         reloadPermission = configAccessor.getConfig().getString("permission.reload", "tc.reload");
         if (chatTypes.isEmpty()) {
@@ -91,5 +98,8 @@ public final class STeamChat extends JavaPlugin {
     }
     public String getReloadPermission() {
         return reloadPermission;
+    }
+    public String getServerName() {
+        return serverName;
     }
 }
