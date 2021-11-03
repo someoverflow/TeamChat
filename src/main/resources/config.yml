@@ -11,6 +11,9 @@ message:
   sent: "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%"
   received: "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%"
 
+permission:
+  reload: "tc.reload"
+
 #    main    ;   tc.main  ;   #tc    ;  §b§lTC
 # Chat Name    permission   command    Chat Prefix
 # -> Permission: ;?; without ; = no permission
