@@ -21,7 +21,6 @@ public final class BTeamChat extends Plugin {
         instance.getLogger().log(Level.INFO, "Loading Config...");
         configAccessor = new ConfigAccessorBungee(this, "config.yml");
         configAccessor.saveDefaultConfig();
-        configAccessor.saveConfig();
         instance.getLogger().log(Level.INFO, "Config Loaded");
 
         instance.getLogger().log(Level.INFO, "Loading messages from Config...");
