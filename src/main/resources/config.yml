@@ -6,7 +6,7 @@
 # - %prefix% : Chat Prefix
 # - %message% : The chat message
 # - %sender% : The player who sent the message
-# - %server% : The server on which the %sender% is currently | Currently only at Bungee
+# - %server% : The server on which the %sender% is currently
 message:
   sent: "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%"
   received: "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%"
