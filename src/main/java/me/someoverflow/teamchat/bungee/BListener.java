@@ -15,7 +15,7 @@ public class BListener implements Listener {
  public void handleChat(ChatEvent event) {
   if (!(event.getSender() instanceof ProxiedPlayer)) return;
   if (event.getMessage().startsWith("#reloadtc")) {
-   if (((ProxiedPlayer) event.getSender()).hasPermission(BTeamChat.getInstance().getReloadPermission())) {
+   if (BTeamChat.getInstance().getReloadPermission().equalsIgnoreCase("?") || ((ProxiedPlayer) event.getSender()).hasPermission(BTeamChat.getInstance().getReloadPermission())) {
     ((ProxiedPlayer) event.getSender()).sendMessage(new TextComponent("[TeamChat] Reload config"));
     BTeamChat.getInstance().reloadConfig();
     ((ProxiedPlayer) event.getSender()).sendMessage(new TextComponent("[TeamChat] Config reloaded"));

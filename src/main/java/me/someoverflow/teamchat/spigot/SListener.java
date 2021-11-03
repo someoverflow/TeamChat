@@ -13,7 +13,7 @@ public class SListener implements Listener {
     @EventHandler
     public void handleChat(AsyncPlayerChatEvent event) {
         if (event.getMessage().startsWith("#reloadtc")) {
-            if (event.getPlayer().hasPermission(STeamChat.getInstance().getReloadPermission())) {
+            if (STeamChat.getInstance().getReloadPermission().equalsIgnoreCase("?") || event.getPlayer().hasPermission(STeamChat.getInstance().getReloadPermission())) {
                 event.getPlayer().sendMessage("[TeamChat] Reload config");
                 STeamChat.getInstance().reloadConfig();
                 event.getPlayer().sendMessage("[TeamChat] Config reloaded");

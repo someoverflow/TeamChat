@@ -14,6 +14,7 @@ message:
   servername: "unknown"
 
 permission:
+  # "?" for no permission
   reload: "tc.reload"
 
 #    main    ;   tc.main  ;   #tc    ;  §b§lTC
