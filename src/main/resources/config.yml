@@ -10,6 +10,8 @@
 message:
   sent: "%prefix% \u00A78> \u00A7fYou \u00A78>> \u00A7f%message%"
   received: "%prefix% \u00A78> \u00A7f%sender% \u00A78>> \u00A7f%message%"
+  # This only has to be filled in if you are not using spigot so no bungee
+  servername: "unknown"
 
 permission:
   reload: "tc.reload"

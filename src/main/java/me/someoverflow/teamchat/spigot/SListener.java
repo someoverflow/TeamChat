@@ -36,24 +36,18 @@ public class SListener implements Listener {
 
     private void handle(AsyncPlayerChatEvent event, Player player, String permission, String command, String prefix, String name) {
         String message = event.getMessage().replaceFirst(command + " ", "");
-        // String serverName = STeamChat.getInstance().getServerName();
-
+        // player.getServer().getName() => "paper"
+        String serverName = STeamChat.getInstance().getServerName();
         String senderMessage = STeamChat.getInstance().getMessageSent()
                 .replaceAll("%prefix%", prefix)
                 .replaceAll("%sender%", player.getDisplayName())
-                .replaceAll("%message%", message);
+                .replaceAll("%message%", message)
+                .replaceAll("%server%", serverName);
         String receiverMessage = STeamChat.getInstance().getMessageReceived()
                 .replaceAll("%prefix%", prefix)
                 .replaceAll("%sender%", player.getDisplayName())
-                .replaceAll("%message%", message);
-
-        /* TODO
-        // player.getServer().getName() => paper
-        if (!serverName.equalsIgnoreCase("!! serverName here !!")) {
-            senderMessage = senderMessage.replaceAll("%server%", serverName);
-            receiverMessage = receiverMessage.replaceAll("%server%", serverName);
-        }
-         */
+                .replaceAll("%message%", message)
+                .replaceAll("%server%", serverName);
 
         for (Player players : STeamChat.getInstance().getServer().getOnlinePlayers()) {
             if (permission == null || players.hasPermission(permission)) {
