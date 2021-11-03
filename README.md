@@ -10,7 +10,9 @@
 
 > Simple & Customizable Team Chat plugin
 
-### 🏠 [Homepage](https://someworkflow.de) (In work)
+### [Homepage](https://someworkflow.de) (In work)
+
+### [SpigotMC](https://www.spigotmc.org/resources/teamchat-bungeecord.97348/)
 
 ## Usage
 
