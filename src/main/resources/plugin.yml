@@ -1,0 +1,5 @@
+name: TeamChat
+main: me.someoverflow.teamchat.spigot.STeamChat
+version: '${version}'
+author: SomeOverflow
+description: TeamChat plugin for Paper
