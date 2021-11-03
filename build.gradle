@@ -1,7 +1,7 @@
 apply plugin: 'java'
 
 group = 'me.someoverflow'
-version = '1.0.1'
+version = '1.1.0'
 
 repositories {
     mavenCentral()
@@ -13,10 +13,13 @@ repositories {
         name = 'destroystokyo-repo'
         url = 'https://repo.destroystokyo.com/repository/maven-public/'
     }
+    maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
 }
 
 dependencies {
     compileOnly 'io.github.waterfallmc:waterfall-api:1.15-SNAPSHOT'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT'
+
 }
 
 def targetJavaVersion = 8
@@ -41,6 +44,9 @@ processResources {
     expand props
     filteringCharset 'UTF-8'
     filesMatching('bungee.yml') {
+        expand props
+    }
+    filesMatching('plugin.yml') {
         expand props
     }
 }
