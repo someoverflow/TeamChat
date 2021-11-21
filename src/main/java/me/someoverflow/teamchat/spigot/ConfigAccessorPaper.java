@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.util.logging.Level;
 
 /**
- * @author SomeOverflow
+ * @author KeksGauner
  */
 public class ConfigAccessorPaper {
 
