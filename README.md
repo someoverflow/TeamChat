@@ -35,7 +35,7 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2021 [SomeOverflow](https://github.com/SomeOverflow).<br />
+Copyright © 2022 [SomeOverflow](https://github.com/SomeOverflow).<br />
 This project is [MIT License](https://github.com/SomeOverflow/TeamChat/blob/master/LICENSE.md) licensed.
 
 ***
