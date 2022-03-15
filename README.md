@@ -3,7 +3,7 @@
   <a href="https://github.com/SomeOverflow/TeamChat/releases">
     <img alt="Version" src="https://img.shields.io/badge/version-1.1.1-blue.svg?cacheSeconds=2592000" />
   </a>
-  <a href="https://github.com/SomeOverflow/TeamChat/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/SomeOverflow/TeamChat/blob/master/LICENSE.md" target="_blank">
     <img alt="License: MIT License" src="https://img.shields.io/badge/License-MIT License-yellow.svg" />
   </a>
 </p>
