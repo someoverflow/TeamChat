@@ -14,11 +14,11 @@
 
 ### [SpigotMC](https://www.spigotmc.org/resources/teamchat-bungeecord.97348/)
 
-Sender image (!! Customizable !!)
+Sender image (Customizable)
 
 ![Sender image](https://user-images.githubusercontent.com/66356230/140167254-f1e23f9d-4af2-4e78-87ef-8b6b16ad89a8.png)
 
-Receiver image (!! Customizable !!)
+Receiver image (Customizable)
 
 ![Receiver image](https://user-images.githubusercontent.com/66356230/140167287-f29988ce-5f70-4487-bbaa-8bea67859ab2.png)
 
@@ -28,10 +28,6 @@ Receiver image (!! Customizable !!)
 '#reloadtc' to reload config
 You can edit the rest in the config
 ```
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
